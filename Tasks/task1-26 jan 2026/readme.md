@@ -1,9 +1,9 @@
-# Task 1 — Semantic HTML Layout (26 January 2026)
+# Task 1 — HTML Layout (26 January 2026)
 
 ## Project Overview
 
 This task was assigned as part of the Codematics Internship Program.
-The requirement was to build a complete webpage layout using only semantic HTML5 tags and optimized CSS (no `<div>` tags allowed).
+The requirement is to build a complete webpage layout using only semantic HTML5 tags and optimized CSS (no `<div>` tags allowed).
 
 ---
 

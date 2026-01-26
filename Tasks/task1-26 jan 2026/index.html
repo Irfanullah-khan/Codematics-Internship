@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML layout (Day1 task)</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, footer {
+            text-align: center;
+            background-color: #eee;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            margin: 10px;
+            gap: 10px;
+            min-height: 250px;
+        }
+
+        aside, section {
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        section {
+            flex: 2;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>Header</header>
+
+    <nav>Navigation Menu</nav>
+
+    <main>
+        <aside>Content</aside>
+        <section>Main Content</section>
+        <aside>Content</aside>
+    </main>
+
+    <footer>Footer</footer>
+
+</body>
+
+</html>

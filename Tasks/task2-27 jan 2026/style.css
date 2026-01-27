@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.hero {
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 50px 10px;
+    margin: 10px;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.logo img {
+    width: 260px;
+    display: flex;
+   justify-self: center;
+}
+
+.main-title {
+    font-size: 20px;
+    letter-spacing:2px;
+    margin-top: 10px;
+    color: #222;
+    text-align: center;
+}
+
+.tagline {
+    margin-top: 7px;
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+
+.download-buttons {
+    padding-left: 60px;
+}
+.download-buttons img {
+    padding-left: 15px;
+    width: 170px;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+.hero-right {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-phones {
+    width: 100%;
+    max-width: 650px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 2px 50px 2px 50px;
+}
+
+.section-left {
+    padding-left: 150px;
+}
+
+.section-right {
+    padding-left: 50px;
+    padding-right: 150px;
+}
+
+.section-left,.section-right {
+    width: 45%;
+}
+
+.phones-left,.phones-right {
+    width: 400px;
+}
+
+.section-title {
+    font-size: 34px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-text {
+    font-size: 19px;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.messages-section {
+    margin-top: 20px;
+}
+
+.future-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.future-left {
+    width: 40%;
+    padding-left: 100px;
+}
+
+.future-phones {
+    width: 430px;                
+    margin-left: 40px;         
+}
+
+.future-right {
+    width: 50%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.icon-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;  
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+}
+
+.future-icons {
+    width: 450px;                
+    opacity: 1;               
+}
+
+.future-title {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 20px 0 15px;
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.future-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 350px;             
+    text-align: center;
+}
+
+.footer-section {
+    text-align: center;
+    padding: 60px 20px 80px 70px;
+}
+
+.footer-title {
+    font-size: 18px;
+    color: #444;
+}
+
+.footer-buttons img {
+    width: 180px;
+    margin: 10px;
+}
+
+.footer-contact {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.footer-contact a {
+    color: #0094ff;
+    text-decoration: none;
+}
+
+.footer-logo {
+    width: 70px;
+    margin-top: 20px;
+    opacity: 0.8;
+}

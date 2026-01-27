@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.header-logo {
+    width: 80px;
+    padding: 20px 20px 4px 2px;
+     margin-left: 10px;
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+.parent {
+    background: #8b2f2f;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin-left: 10px;
+    position: relative;
+}
+
+/*New Concept:  This is for diagonal cut (slanted corner) created using CSS clip-path */
+.parent::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;       
+    height: 100px;
+    background: white;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.left-side {
+    width: 40%;
+    margin-top: 155px;
+}
+
+.left-side h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.info-text {
+    width: 80%;
+    line-height: 1.6;
+    font-size: 15px;
+    color: black;
+}
+
+.deadline {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+}
+
+
+.right-side {
+    width: 60%;
+}
+
+
+.form1 {
+    display: grid;
+    gap: 4px;
+}
+h3{
+    color: black;
+    font-weight: 700;
+}
+
+ textarea {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+input{
+    padding: 14px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #f5d7d7;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.award {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    margin-top: 25px;
+    padding: 14px;
+    width: 60%;
+    border: none;
+    background: white;
+    color: #8b2f2f;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}

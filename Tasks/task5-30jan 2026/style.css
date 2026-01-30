@@ -1,0 +1,683 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 2px solid rgb(132, 120, 120);
+  border-width: 0px 10px 5px 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding-right: 40px;
+}
+
+.data h2 {
+  font-size: 18px;
+  color: red;
+}
+
+.data h3 {
+  padding-top: 10px;
+  font-size: 40px;
+  text-decoration: overline;
+}
+
+.data h4 {
+  padding-top: 5px;
+  font-size: 15px;
+  color: rgb(72, 70, 70);
+}
+
+ul {
+  display: flex;
+  background-color: brown;
+  gap: 30px;
+  justify-content: end;
+  padding-right: 32px;
+}
+li {
+  list-style: none;
+  color: white;
+  padding: 10px;
+}
+li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+li:hover {
+  background-color: rgb(116, 117, 118);
+}
+
+.banners {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+
+.baner1 {
+  width: 50%;
+}
+.baner1 img {
+  width: 100%;
+}
+.baner2 {
+  width: 50%;
+  background-image: url(./keefer/form_bg.jpg);
+  background-size: cover;
+}
+
+.question-banner {
+  display: flex;
+  align-items: start;
+  /* background:#e5e5e5; */
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+}
+
+.q-left {
+  background: #b30000;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.q-right {
+  padding: 10px 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+.q-right span {
+  color: #1f4e79;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.para p {
+  font-size: 22px;
+  padding: 0px 30px 0px 30px;
+}
+
+.partition {
+  display: flex;
+}
+.confidential {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  rotate: calc(15deg);
+}
+.form {
+  width: 50%;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.form label {
+  display: inline-block;
+  width: 80px;
+}
+
+.form input {
+  width: 60%;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.text {
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.text textarea {
+  width: 90%;
+  height: 50px;
+  font-size: 18px;
+}
+
+.last {
+  display: flex;
+  padding: 10px 30px 2px 30px;
+  gap: 10px;
+}
+.last p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  background-color: #b30000;
+  padding: 5px 5px 5px 10px;
+}
+
+.box p {
+  color: white;
+  font-size: 22px;
+  padding-right: 5px;
+}
+
+.box img {
+  width: 24px;
+  height: 24px;
+  padding-top: 5px;
+}
+
+/* content cards css */
+
+.content-info {
+  margin-top: 20px;
+  display: flex;
+  padding: 30px;
+  background: #ffffff;
+}
+.card1 {
+  padding: 20px;
+  width: 32%;
+  border-right: 1px solid black;
+}
+
+.card1 h3 span {
+  color: #8c0000;
+}
+.card1 h4 {
+  color: #8c0000;
+  margin-bottom: 10px;
+}
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.linebtn {
+  margin-top: 30px;
+  margin-left: 90px;
+  border-top: 1px solid #928f8f;
+  text-align: center;
+  width: 200px;
+}
+.card1 button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin: 0px 10px 10px 10px;
+}
+
+.card2 {
+  border-right: 1px solid black;
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inside1 {
+  padding: 20px;
+  height: 50%;
+}
+
+.box1 {
+  display: flex;
+}
+.boxtext {
+  width: 60%;
+}
+.boxtext h3 span {
+  color: #8c0000;
+}
+.card2 .linebtn {
+  margin-top: 17px;
+  margin-left: 20px;
+  border-top: 1px solid #928f8f;
+  text-align: center;
+  width: 200px;
+}
+.card2 button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin: 0px 2px 0px 2px;
+}
+.boxImage {
+  width: 40%;
+}
+
+.inside2 {
+  padding: 20px;
+  height: 50%;
+}
+
+.card3 {
+  padding: 20px;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card3 h3 span {
+  color: #8c0000;
+}
+
+.card3 p {
+  padding-top: 10px;
+  font-size: 17px;
+  margin: 10px 10;
+}
+.badges {
+  display: flex;
+  gap: 30px;
+  justify-content: start;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.card3 .linebtn {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-top: 2px solid #534f4f;
+  text-align: center;
+  width: 200px;
+}
+.card3 button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin: 0px 2px 0px 2px;
+}
+
+.endportion {
+  display: flex;
+  background: #ffffff;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 30px;
+}
+
+.col1 {
+  width: 25%;
+}
+
+.end1 h3 span {
+  color: #e23737;
+}
+.end1 h3 {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding: 10px;
+}
+
+.col1 h4 {
+  font-size: 30px;
+  color: #928f8f;
+  margin-top: 20px;
+  text-align: center;
+}
+.img1 {
+  display: flex;
+  background-color: rgb(133, 127, 117);
+}
+
+.img1 img {
+  width: 8px;
+  height: none;
+}
+.img1 h2 {
+  color: white;
+  padding: 10px 100px 10px 10px;
+}
+.imageFit {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageFit button {
+  align-self: flex-end;
+  background-color: rgb(133, 127, 117);
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.imageFit button img {
+  padding-left: 5px;
+  width: 15px;
+}
+
+.botomline {
+  display: flex;
+  flex-direction: column;
+}
+.end1 .line {
+  padding-top: 0px;
+  padding-left: 12px;
+}
+
+.endtopic {
+  font-size: 26px;
+  padding-top: 20px;
+}
+
+.endtopic span {
+  color: rgb(129, 45, 45);
+}
+
+.col2 {
+  width: 50%;
+  background: #ffffff;
+}
+
+.col2 h1 {
+  padding: 10px 10px 10px 15px;
+}
+.col2 p {
+  font-size: 17px;
+  line-height: 25px;
+  padding: 15px;
+}
+.col3 {
+  width: 25%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.right-box {
+  margin-bottom: 20px;
+}
+
+.right-box h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.right-box span {
+  color: #8c0000;
+}
+
+.col3 .ending {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-top: 2px solid #534f4f;
+  text-align: center;
+  width: 200px;
+}
+.col3 button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin: 0px 2px 0px 2px;
+}
+
+.endbadges {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.lineimg {
+  border-top: 1px solid rgb(203, 193, 193);
+  width: 100%;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .data {
+    padding-right: 0;
+  }
+
+  ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .banners {
+    flex-direction: column;
+  }
+
+  .baner1,
+  .baner2 {
+    width: 100%;
+  }
+
+  .partition {
+    flex-direction: column;
+  }
+
+  .form,
+  .confidential {
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .content-info {
+    flex-direction: column;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #aaa;
+  }
+
+  .endportion {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .col1,
+  .col2,
+  .col3 {
+    width: 100%;
+  }
+
+  .endbadges img {
+    width: 250px;
+  }
+
+  .follow {
+    padding-top: 30px;
+  }
+  .follow h4 {
+    font-size: 30px;
+  }
+  .follow img {
+    width: 80px;
+    padding-top: 10px;
+    padding-right: 15px;
+  }
+
+  .botomline {
+    width: 65%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .data h3 {
+    font-size: 28px;
+  }
+
+  li a {
+    font-size: 14px;
+  }
+
+  .q-left {
+    font-size: 20px;
+  }
+
+  .q-right {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .para p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .form input {
+    width: 30%;
+  }
+
+  .card1 .linebtn {
+    width: 170px;
+  }
+
+  .text textarea {
+    width: 100%;
+  }
+
+  .linebtn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .box {
+    align-items: center;
+  }
+
+  .box p {
+    font-size: 16px;
+  }
+
+  .align {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .box1 {
+    flex-direction: row;
+    padding-left: 0px;
+  }
+
+  .box1 .boxtext {
+    padding-left: 0px;
+  }
+
+  .boxtext,
+  .boxImage {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card3 .badges {
+    gap: 70px;
+  }
+  .col3 {
+    padding: 10px;
+  }
+
+  .endbadges img {
+    width: 200px;
+    padding-left: 70px;
+  }
+
+  .follow {
+    padding-top: 30px;
+  }
+  .follow img {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  .partition {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form {
+    width: 65%;
+    padding-left: 10px;
+  }
+
+  .confidential {
+    width: 35%;
+    padding-left: 10px;
+    justify-content: center;
+  }
+
+  .confidential img {
+    width: 100%;
+    max-width: 120px;
+    transform: rotate(15deg);
+  }
+
+  .last .box {
+    width: 100%;
+    padding-left: 5px;
+    display: flex;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .narbar ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: brown;
+  }
+
+  .narbar ul.show {
+    display: flex;
+  }
+}

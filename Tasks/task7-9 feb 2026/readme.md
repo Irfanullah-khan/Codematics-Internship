@@ -1,4 +1,5 @@
-# JavaScript DOM Tasks
+
+# Task 7 - JavaScript DOM-based Tasks 
 
 A collection of beginner-to-intermediate **JavaScript DOM-based Tasks** built using **HTML, CSS, and JavaScript**.
 This project demonstrates practical use of DOM manipulation, event handling, user input processing, and real-time UI updates.

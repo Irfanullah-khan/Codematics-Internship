@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="main-title">JavaScript DOM Tasks</h1>
+
+    <!-- Task 1 -->
+    <div class="card">
+        <h2>Task 1 — Age Calculator</h2>
+        <h5>Enter Your DOB :</h5>
+        <input type="date" id="dob">
+        <p id="ageResult"></p>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="card">
+        <h2>Task 2 — Hours to Seconds Converter</h2>
+        <input type="number" id="hrs" placeholder="Enter No. Of Hours:">
+        <p id="hrsResult"></p>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="card">
+        <h2>Task 3 — Next Number Finder</h2>
+
+        <input type="number" id="arrayNum" placeholder="Number from array">
+        <button onclick="findNextInArray()">Find Next</button>
+
+        <input type="number" id="singleNum" placeholder="Any number">
+        <button onclick="findNextSingle()">Next Value</button>
+
+        <p id="nextResult"></p>
+    </div>
+
+    <!-- Task 4 -->
+    <div class="card">
+        <h2>Task 4 — Name Capitalizer</h2>
+        <input type="text" id="nameInput" placeholder="Enter Your Name :">
+        <p id="nameResult"></p>
+    </div>
+
+    <!-- Task 5 -->
+    <div class="card">
+        <h2>Task 5 — BMI Calculator</h2>
+        <input type="number" id="weight" placeholder="Enter Your Weight (kg)">
+        <input type="number" id="height" placeholder="Enter Your Height (meters)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmiResult"></p>
+    </div>
+
+    <!-- Task 6 -->
+    <div class="card">
+        <h2>Task 6 — Random Array Generator</h2>
+        <button id="generateArray">Generate Array</button>
+        <p id="arrayOutput"></p>
+        <p id="firstElement"></p>
+        <p id="lastElement"></p>
+    </div>
+
+    <!-- Task 7 -->
+    <div class="card">
+        <h2>Task 7 — Add Two Numbers</h2>
+        <input type="number" id="num1" placeholder="Enter first number:">
+        <input type="number" id="num2" placeholder="Enter second number:">
+        <input type="text" id="sumResult" placeholder="Sum Result" readonly>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

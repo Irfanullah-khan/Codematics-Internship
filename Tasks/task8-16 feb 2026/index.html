@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codematics Internship Projects</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white w-full max-w-3xl p-8 rounded-2xl shadow-2xl">
+
+    <!-- Heading -->
+    <h1 class="text-3xl font-bold text-center mb-6">
+      Codematics Internship — Task Projects
+    </h1>
+
+    <p class="text-center text-gray-600 mb-8">
+      Click on any project to view and open it live.
+    </p>
+
+    <!-- Project List -->
+    <div class="space-y-4">
+
+      <!-- Calculator -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('calc')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          Calculator App
+        </button>
+
+        <div id="calc" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Basic arithmetic calculator using JavaScript & Tailwind.</p>
+          <a href="calculator/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('carousel')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          Image Carousel
+        </button>
+
+        <div id="carousel" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Responsive slider with next/prev & auto-slide.</p>
+          <a href="carousel/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Temperature -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('temp')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          Temperature Converter
+        </button>
+
+        <div id="temp" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Celsius ↔ Fahrenheit conversion tool.</p>
+          <a href="temperature-converter/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Clock -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('clock')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          Digital Clock
+        </button>
+
+        <div id="clock" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Real-time digital clock with AM/PM.</p>
+          <a href="digital-clock/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('password')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          Password Generator
+        </button>
+
+        <div id="password" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Generate secure passwords & copy instantly.</p>
+          <a href="password-generator/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Todo -->
+      <div class="border rounded-xl overflow-hidden">
+        <button onclick="toggle('todo')" 
+          class="w-full text-left p-4 bg-gray-100 hover:bg-gray-200 font-semibold">
+          To-Do List App
+        </button>
+
+        <div id="todo" class="hidden p-4 bg-white">
+          <p class="mb-3 text-gray-600">Task manager with local storage support.</p>
+          <a href="todo-app/index.html" 
+             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Open Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  function toggle(id) {
+    const section = document.getElementById(id);
+    section.classList.toggle("hidden");
+  }
+</script>
+
+</body>
+</html>

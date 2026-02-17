@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-96">
+
+    <h2 class="text-2xl font-bold text-center mb-4">Password Generator</h2>
+
+  
+    <div class="mb-4 space-y-2">
+      <label class="flex items-center gap-2">
+        <input type="radio" name="mode" checked onclick="setMode('manual')">
+        Enter my own password
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="radio" name="mode" onclick="setMode('generate')">
+        Generate random password
+      </label>
+    </div>
+
+
+    <input 
+      type="text"
+      id="passwordField"
+      placeholder="Type your password..."
+      oninput="detectCharacters()"
+      class="w-full p-3 border rounded-lg mb-4 focus:outline-none"
+    >
+
+
+    <div class="space-y-2 mb-4">
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="uppercase"> Uppercase Letters
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="lowercase"> Lowercase Letters
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="numbers"> Numbers
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="special"> Special Characters
+      </label>
+    </div>
+
+   
+    <button onclick="generatePassword()" 
+      class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 mb-2">
+      Generate Password
+    </button>
+
+    <button onclick="copyPassword()" 
+      class="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600">
+      Copy to Clipboard
+    </button>
+
+    <div id="message" class="text-center mt-4 font-semibold"></div>
+
+  </div>
+
+<script>
+
+let mode = "manual";
+
+function setMode(selectedMode) {
+  mode = selectedMode;
+  document.getElementById("passwordField").value = "";
+  document.getElementById("message").textContent = "";
+}
+
+
+// 🔍 Detect typed password features
+function detectCharacters() {
+  if(mode !== "manual") return;
+
+  const pass = document.getElementById("passwordField").value;
+
+  document.getElementById("uppercase").checked = /[A-Z]/.test(pass);
+  document.getElementById("lowercase").checked = /[a-z]/.test(pass);
+  document.getElementById("numbers").checked = /[0-9]/.test(pass);
+  document.getElementById("special").checked = /[!@#$%^&*(),.?":{}|<>]/.test(pass);
+}
+
+
+
+function generatePassword() {
+
+  if(mode === "manual") {
+    document.getElementById("message").textContent = "Switch to 'Generate' mode to create password!";
+    return;
+  }
+
+  const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lower = "abcdefghijklmnopqrstuvwxyz";
+  const nums = "0123456789";
+  const special = "!@#$%^&*()_+{}[]";
+
+  let characters = "";
+
+  if(document.getElementById("uppercase").checked) characters += upper;
+  if(document.getElementById("lowercase").checked) characters += lower;
+  if(document.getElementById("numbers").checked) characters += nums;
+  if(document.getElementById("special").checked) characters += special;
+
+  if(characters === "") {
+    alert("Select at least one feature!");
+    return;
+  }
+
+  let password = "";
+
+  for(let i=0; i<12; i++) {
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+
+  document.getElementById("passwordField").value = password;
+  document.getElementById("message").textContent = "Random password generated!";
+}
+
+
+// Copy function
+function copyPassword() {
+  const pass = document.getElementById("passwordField");
+
+  if(pass.value === "") {
+    alert("No password to copy!");
+    return;
+  }
+
+  navigator.clipboard.writeText(pass.value);
+  document.getElementById("message").textContent = "Password copied!";
+}
+
+</script>
+
+</body>
+</html>

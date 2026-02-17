@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-80">
+
+    <h2 class="text-2xl font-bold text-center mb-4">Temperature Converter</h2>
+
+  
+    <input 
+      type="number" 
+      id="tempInput"
+      placeholder="Enter temperature in °C"
+      class="w-full p-3 border rounded-lg mb-4 focus:outline-none"
+    >
+
+    
+    <button 
+      id="convertBtn"
+      onclick="convertTemp()"
+      class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 mb-3">
+      Convert to °F
+    </button>
+
+
+    <button 
+      onclick="toggleMode()"
+      class="w-full bg-gray-700 text-white p-3 rounded-lg hover:bg-gray-800">
+      Switch to Fahrenheit → Celsius
+    </button>
+
+   
+    <div id="result" class="text-center text-xl font-semibold mt-4"></div>
+
+  </div>
+
+  <script>
+
+  
+    let isCelsius = true;
+
+    function convertTemp() {
+      const input = document.getElementById("tempInput").value;
+      const result = document.getElementById("result");
+
+      if(input === "") {
+        result.textContent = "Please enter a value";
+        return;
+      }
+
+      let output;
+
+      if(isCelsius) {
+        
+        output = (input * 9/5) + 32;
+        result.textContent = input + "°C = " + output.toFixed(2) + "°F";
+      } else {
+        
+        output = (input - 32) * 5/9;
+        result.textContent = input + "°F = " + output.toFixed(2) + "°C";
+      }
+    }
+
+    function toggleMode() {
+      isCelsius = !isCelsius;
+
+      const inputField = document.getElementById("tempInput");
+      const convertBtn = document.getElementById("convertBtn");
+      const result = document.getElementById("result");
+
+      result.textContent = "";
+      inputField.value = "";
+
+      if(isCelsius) {
+        inputField.placeholder = "Enter temperature in °C";
+        convertBtn.textContent = "Convert to °F";
+      } else {
+        inputField.placeholder = "Enter temperature in °F";
+        convertBtn.textContent = "Convert to °C";
+      }
+    }
+
+  </script>
+
+</body>
+</html>

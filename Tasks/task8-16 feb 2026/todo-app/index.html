@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-[420px]">
+
+    <h2 class="text-2xl font-bold text-center mb-4">To-Do List App</h2>
+
+    <!-- Add Task -->
+    <div class="flex gap-2 mb-4">
+      <input 
+        type="text"
+        id="taskInput"
+        placeholder="Enter a task..."
+        class="flex-1 p-3 border rounded-lg focus:outline-none"
+      >
+      <button onclick="addTask()" 
+        class="bg-blue-500 text-white px-4 rounded-lg hover:bg-blue-600">
+        Add
+      </button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="space-y-2"></ul>
+
+  </div>
+
+<script>
+
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
+function renderTasks() {
+  const list = document.getElementById("taskList");
+  list.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    list.innerHTML += `
+      <li class="flex items-center justify-between bg-gray-100 p-3 rounded-lg">
+
+        <div class="flex items-center gap-3 flex-1">
+          
+          <!-- Completion checkbox -->
+          <input type="checkbox" 
+            ${task.completed ? "checked" : ""}
+            onchange="toggleComplete(${index})"
+          >
+
+          <!-- Task text -->
+          <span class="${task.completed ? 'line-through text-gray-500' : ''}">
+            ${task.text}
+          </span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-2">
+          <button onclick="editTask(${index})"
+            class="bg-yellow-400 px-2 py-1 rounded hover:bg-yellow-500">Edit</button>
+
+          <button onclick="deleteTask(${index})"
+            class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Delete</button>
+        </div>
+
+      </li>
+    `;
+  });
+
+  saveTasks();
+}
+
+// Add task
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const text = input.value.trim();
+
+  if(text === "") return;
+
+  tasks.push({
+    text: text,
+    completed: false
+  });
+
+  input.value = "";
+  renderTasks();
+}
+
+// Delete task
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  renderTasks();
+}
+
+// Edit task
+function editTask(index) {
+  const newText = prompt("Edit task:", tasks[index].text);
+
+  if(newText !== null && newText.trim() !== "") {
+    tasks[index].text = newText.trim();
+    renderTasks();
+  }
+}
+
+
+function toggleComplete(index) {
+  tasks[index].completed = !tasks[index].completed;
+  renderTasks();
+}
+
+renderTasks();
+
+</script>
+
+</body>
+</html>
